@@ -1,0 +1,397 @@
+@import url( 'variables.less' );
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	font: 14px/1.45 @baseFont;
+	color: @baseColor;
+
+	@media @544 {
+		font: 12px/1.45 @baseFont;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.row {
+	margin: 0;
+}
+
+.has-padR {
+	padding-right: 15px;
+
+	@media @767 {
+		padding-right: 0;
+	}
+}
+
+.has-padL {
+	padding-left: 15px;
+
+	@media @767 {
+		padding-left: 0;
+	}
+}
+
+.getImg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+
+	img {
+		display: none !important;
+	}
+}
+
+.toggle-sidebar {
+	.toggle-hide {
+		display: none;
+		.transition( .5s );
+	}
+
+	#main-sidebar {
+		width: 50px;
+
+		.profile-details {
+			.profile-img {
+				.getImg {
+					width: 35px;
+					height: 35px;
+					background-position: bottom -3px center;
+				}
+			}
+		}
+
+		#sidebar-menu {
+			ul {
+				li {
+					a {
+						padding: 10px 0;
+
+						.icon {
+							width: 100%;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#main-section {
+		width: ~'calc( 100% - 50px )';
+	}
+}
+
+#main-sidebar {
+	background: lighten( #000, 7% );
+	width: 300px;
+	min-height: 100vh;
+	padding: 20px 0;
+	color: #fff;
+	.transition( .5s );
+
+	.profile-details {
+		margin: 0 0 30px;
+
+		.profile-img {
+			margin: 0 0 15px;
+
+			.getImg {
+				width: 175px;
+				height: 175px;
+				margin: 0 auto;
+				background-size: 70%;
+				border-radius: 100%;
+				background-position: bottom -10px center;
+				.transition( .5s );
+
+				&.default {
+					background-color: #fff;
+				}
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.role {
+			margin: 0 0 10px;
+		}
+
+		.member-since {
+			font: 0.857em/1.45 @baseFont;
+
+			.label {
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+
+	#sidebar-menu {
+		ul {
+			li {
+				list-style: none;
+
+				a {
+					padding: 10px 20px;
+					.transition( .5s );
+
+					.icon {
+						width: 30px;
+					}
+
+					.text {
+						width: ~'calc( 100% - 30px )';
+					}
+
+					&:hover {
+						background: lighten( #000, 10% );
+					}
+				}
+
+				&.active {
+					a {
+						background: lighten( #000, 10% );
+					}
+				}
+			}
+		}
+	}
+}
+
+#main-section {
+	width: ~'calc( 100% - 300px )';
+	background: lighten( #000, 98% );
+
+	.topbar {
+		background: #fff;
+		padding: 15px 20px;
+		border-bottom: 1px solid lighten( #000, 95% );
+
+		.toggle-sidebar {
+			cursor: pointer;
+			margin: 0 20px 0 0;
+		}
+
+		#breadcrumbs {
+			ul {
+				li {
+					&:not( :last-child ) {
+						position: relative;
+						padding: 0 15px 0 0;
+						margin: 0 7px 0 0;
+
+						&:after {
+							content: '\f105';
+							font: 1em/1.45 'FontAwesome';
+							position: absolute;
+							top: 0;
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.content-details {
+		padding: 20px;
+
+		.box {
+			margin: 0 0 30px;
+
+			&-header {
+				background: @primary;
+				padding: 10px 15px;
+				color: #fff;
+
+				.box-title {
+					.icon {
+						margin: 0 10px 0 0;
+					}
+
+					.text {
+						font: 1.286em/1.45 @headingMedium;
+					}
+				}
+
+				.refresh {
+					cursor: pointer;
+				}
+			}
+
+			&-content {
+				background: #fff;
+				padding: 20px 0;
+
+				.warning {
+					width: ~'calc( 100% - 30px )';
+					margin: 0 auto;
+				}
+
+				&.resume-fields {
+					padding: 30px 20px 0;
+				}
+
+				.upload-photo {
+					.preview {
+						position: relative;
+						max-width: 192px;
+						width: 100%;
+						height: 192px;
+						background-size: cover;
+						background-position: top center;
+						border: 5px dashed lighten( #000, 90% );
+
+						h3 {
+							font: 1.286em/1.45 @headingMedium;
+							margin: 0;
+						}
+
+						&.has-image {
+							border: 1px solid lighten( #000, 90% );
+
+							h3 {
+								display: none;
+							}
+						}
+
+						.delete {
+							display: -webkit-box;
+							display: -webkit-flex;
+							display: -ms-flexbox;
+							display: flex;
+							-webkit-box-align: center;
+							-webkit-align-items: center;
+							-ms-flex-align: center;
+							        align-items: center;
+							-webkit-box-pack: center;
+							-webkit-justify-content: center;
+							-ms-flex-pack: center;
+							        justify-content: center;
+							-webkit-flex-wrap: wrap;
+							-ms-flex-wrap: wrap;
+							        flex-wrap: wrap;
+							width: 30px;
+							height: 30px;
+							border-radius: 100%;
+							position: absolute;
+							top: -10px;
+							right: -10px;
+							background: @secondary;
+							color: #fff;
+							z-index: 2;
+							cursor: pointer;
+						}
+					}
+
+					.upload-file {
+						max-width: 192px;
+						width: 100%;
+						margin: 20px auto 5px;
+						position: relative;
+
+						label {
+							background: @primary;
+							font: 1.143em/1.45 @headingMedium;
+							padding: 5px 10px;
+							display: block;
+							color: #fff;
+						}
+
+						input[type=file] {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 33px;
+							z-index: 2;
+							opacity: 0;
+							cursor: pointer;
+						}
+					}
+				}
+
+				.textEditor-title {
+					font: 1em/1.45 @baseFont;
+				}
+			}
+
+			&.messages {
+				.messages-list {
+					.message-item {
+						padding: 0 15px;
+
+						.name {
+							font: 1.143em/1.45 @headingMedium;
+						}
+					}
+				}
+			}
+		}
+
+		.btn-float {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+
+			.btn {
+				background: @secondary;
+				color: #fff;
+				width: 60px;
+				height: 60px;
+				border-radius: 100%;
+				cursor: pointer;
+				.box-shadow( 0 2px 10px -4px #000 );
+			}
+		}
+	}
+}
+
+.warning {
+	border: 1px solid lighten( #000, 95% );
+	border-left: 0;
+	background: lighten( #000, 99% );
+	padding: 7px 0 7px 40px;
+	position: relative;
+	width: 100%;
+	display: block;
+
+	&:before {
+		content: '\f06a';
+		font: 1em/1.45 'FontAwesome';
+		position: absolute;
+		top: 7px;
+		left: 20px;
+		color: @secondary;
+	}
+
+	&:after {
+		width: 10px;
+		height: calc( 100% + 2px );
+		position: absolute;
+		background: @secondary;
+		content: '';
+		top: -1px;
+		left: 0;
+	}
+}
+
+.note {
+	font: 0.857em/1.45 @baseFont;
+
+	strong {
+		font: 1em/1.45 @headingMedium;
+	}
+}

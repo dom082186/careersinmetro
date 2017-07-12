@@ -1,0 +1,343 @@
+@font-face {
+  font-family: 'Oswald-Medium';
+  src: url('../fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Oswald-Medium.woff') format('woff'), url('../fonts/Oswald-Medium.ttf') format('truetype'), url('../fonts/Oswald-Medium.svg#Oswald-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Oswald-Bold.woff') format('woff'), url('../fonts/Oswald-Bold.ttf') format('truetype'), url('../fonts/Oswald-Bold.svg#Oswald-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf') format('truetype'), url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ----- fonts ----- */
+/* ----- colors ----- */
+/* ----- dynamic ----- */
+/* ----- media screens ----- */
+html {
+  overflow-y: scroll;
+}
+body {
+  font: 14px/1.45 'OpenSans-Regular';
+  color: #808080;
+}
+@media screen and ( max-width: 544px ) {
+  body {
+    font: 12px/1.45 'OpenSans-Regular';
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.row {
+  margin: 0;
+}
+.has-padR {
+  padding-right: 15px;
+}
+@media screen and ( max-width: 767px ) {
+  .has-padR {
+    padding-right: 0;
+  }
+}
+.has-padL {
+  padding-left: 15px;
+}
+@media screen and ( max-width: 767px ) {
+  .has-padL {
+    padding-left: 0;
+  }
+}
+.getImg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.getImg img {
+  display: none !important;
+}
+.toggle-sidebar .toggle-hide {
+  display: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.toggle-sidebar #main-sidebar {
+  width: 50px;
+}
+.toggle-sidebar #main-sidebar .profile-details .profile-img .getImg {
+  width: 35px;
+  height: 35px;
+  background-position: bottom -3px center;
+}
+.toggle-sidebar #main-sidebar #sidebar-menu ul li a {
+  padding: 10px 0;
+}
+.toggle-sidebar #main-sidebar #sidebar-menu ul li a .icon {
+  width: 100%;
+  text-align: center;
+}
+.toggle-sidebar #main-section {
+  width: calc( 100% - 50px );
+}
+#main-sidebar {
+  background: #121212;
+  width: 300px;
+  min-height: 100vh;
+  padding: 20px 0;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#main-sidebar .profile-details {
+  margin: 0 0 30px;
+}
+#main-sidebar .profile-details .profile-img {
+  margin: 0 0 15px;
+}
+#main-sidebar .profile-details .profile-img .getImg {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto;
+  background-size: 70%;
+  border-radius: 100%;
+  background-position: bottom -10px center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#main-sidebar .profile-details .profile-img .getImg.default {
+  background-color: #fff;
+}
+#main-sidebar .profile-details p {
+  margin: 0;
+}
+#main-sidebar .profile-details .role {
+  margin: 0 0 10px;
+}
+#main-sidebar .profile-details .member-since {
+  font: 0.857em/1.45 'OpenSans-Regular';
+}
+#main-sidebar .profile-details .member-since .label {
+  margin: 0 5px 0 0;
+}
+#main-sidebar #sidebar-menu ul li {
+  list-style: none;
+}
+#main-sidebar #sidebar-menu ul li a {
+  padding: 10px 20px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#main-sidebar #sidebar-menu ul li a .icon {
+  width: 30px;
+}
+#main-sidebar #sidebar-menu ul li a .text {
+  width: calc( 100% - 30px );
+}
+#main-sidebar #sidebar-menu ul li a:hover {
+  background: #1a1a1a;
+}
+#main-sidebar #sidebar-menu ul li.active a {
+  background: #1a1a1a;
+}
+#main-section {
+  width: calc( 100% - 300px );
+  background: #fafafa;
+}
+#main-section .topbar {
+  background: #fff;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+#main-section .topbar .toggle-sidebar {
+  cursor: pointer;
+  margin: 0 20px 0 0;
+}
+#main-section .topbar #breadcrumbs ul li:not( :last-child ) {
+  position: relative;
+  padding: 0 15px 0 0;
+  margin: 0 7px 0 0;
+}
+#main-section .topbar #breadcrumbs ul li:not( :last-child ):after {
+  content: '\f105';
+  font: 1em/1.45 'FontAwesome';
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#main-section .content-details {
+  padding: 20px;
+}
+#main-section .content-details .box {
+  margin: 0 0 30px;
+}
+#main-section .content-details .box-header {
+  background: #4c8eb4;
+  padding: 10px 15px;
+  color: #fff;
+}
+#main-section .content-details .box-header .box-title .icon {
+  margin: 0 10px 0 0;
+}
+#main-section .content-details .box-header .box-title .text {
+  font: 1.286em/1.45 'Oswald-Medium';
+}
+#main-section .content-details .box-header .refresh {
+  cursor: pointer;
+}
+#main-section .content-details .box-content {
+  background: #fff;
+  padding: 20px 0;
+}
+#main-section .content-details .box-content .warning {
+  width: calc( 100% - 30px );
+  margin: 0 auto;
+}
+#main-section .content-details .box-content.resume-fields {
+  padding: 30px 20px 0;
+}
+#main-section .content-details .box-content .upload-photo .preview {
+  position: relative;
+  max-width: 192px;
+  width: 100%;
+  height: 192px;
+  background-size: cover;
+  background-position: top center;
+  border: 5px dashed #e6e6e6;
+}
+#main-section .content-details .box-content .upload-photo .preview h3 {
+  font: 1.286em/1.45 'Oswald-Medium';
+  margin: 0;
+}
+#main-section .content-details .box-content .upload-photo .preview.has-image {
+  border: 1px solid #e6e6e6;
+}
+#main-section .content-details .box-content .upload-photo .preview.has-image h3 {
+  display: none;
+}
+#main-section .content-details .box-content .upload-photo .preview .delete {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #df141d;
+  color: #fff;
+  z-index: 2;
+  cursor: pointer;
+}
+#main-section .content-details .box-content .upload-photo .upload-file {
+  max-width: 192px;
+  width: 100%;
+  margin: 20px auto 5px;
+  position: relative;
+}
+#main-section .content-details .box-content .upload-photo .upload-file label {
+  background: #4c8eb4;
+  font: 1.143em/1.45 'Oswald-Medium';
+  padding: 5px 10px;
+  display: block;
+  color: #fff;
+}
+#main-section .content-details .box-content .upload-photo .upload-file input[type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 33px;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+#main-section .content-details .box-content .textEditor-title {
+  font: 1em/1.45 'OpenSans-Regular';
+}
+#main-section .content-details .box.messages .messages-list .message-item {
+  padding: 0 15px;
+}
+#main-section .content-details .box.messages .messages-list .message-item .name {
+  font: 1.143em/1.45 'Oswald-Medium';
+}
+#main-section .content-details .btn-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+#main-section .content-details .btn-float .btn {
+  background: #df141d;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 10px -4px #000;
+  box-shadow: 0 2px 10px -4px #000;
+}
+.warning {
+  border: 1px solid #f2f2f2;
+  border-left: 0;
+  background: #fcfcfc;
+  padding: 7px 0 7px 40px;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.warning:before {
+  content: '\f06a';
+  font: 1em/1.45 'FontAwesome';
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  color: #df141d;
+}
+.warning:after {
+  width: 10px;
+  height: calc(102%);
+  position: absolute;
+  background: #df141d;
+  content: '';
+  top: -1px;
+  left: 0;
+}
+.note {
+  font: 0.857em/1.45 'OpenSans-Regular';
+}
+.note strong {
+  font: 1em/1.45 'Oswald-Medium';
+}
